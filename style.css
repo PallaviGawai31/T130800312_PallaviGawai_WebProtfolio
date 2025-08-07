@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+header {
+  background: #003366;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.home-image {
+  text-align:center;
+}
+.profile-pic {
+  width:300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #003366;
+  
+}
+
+
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+}
+
+#navbar {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+#navbar li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 14px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  background: white;
+  color: #003366;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.content-section {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.content-section.active {
+  display: block;
+}
+
+h1 {
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.project-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-list li {
+  background: #e6f0ff;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  background: #003366;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0052cc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navbar {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
